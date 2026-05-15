@@ -1,24 +1,47 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, Mail } from "lucide-react";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white overflow-hidden">
       <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
-        <h1 className="text-6xl font-bold tracking-tight">
-          Hi, I'm Dat
-        </h1>
 
-        <p className="mt-6 max-w-2xl text-lg text-gray-400">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-6xl font-bold tracking-tight md:text-8xl"
+        >
+          Dat Dong
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="mt-6 max-w-2xl text-lg text-gray-400 md:text-xl"
+        >
           Software Engineering Student & Fullstack Developer
-        </p>
+        </motion.p>
 
-        <div className="mt-8 flex gap-4">
-          <button className="rounded-xl bg-white px-6 py-3 font-semibold text-black transition hover:scale-105">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+          className="mt-10 flex flex-wrap justify-center gap-4"
+        >
+          <button className="flex items-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-black transition hover:scale-105">
             View Projects
+            <ArrowRight size={18} />
           </button>
 
-          <button className="rounded-xl border border-gray-700 px-6 py-3 transition hover:bg-white hover:text-black">
-            Contact Me
+          <button className="flex items-center gap-2 rounded-2xl border border-gray-700 px-6 py-3 transition hover:bg-white hover:text-black">
+            <Mail size={18} />
+            Contact
           </button>
-        </div>
+        </motion.div>
       </section>
     </main>
   );
