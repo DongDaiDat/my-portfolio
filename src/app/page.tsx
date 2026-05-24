@@ -15,10 +15,10 @@ import {
 import React, { useState } from "react";
 
 const personal = {
-  name: "Đạt Đồng",
+  name: "Đồng Đại Đạt",
   role: "Software Engineering Student",
   school: "Phenikaa University",
-  location: "Ha Noi, Viet Nam",
+  location: "Thanh Hoa, Viet Nam",
   email: "dongdat2208@gmail.com",
   github: "https://github.com/DongDaiDat",
   linkedin: "https://linkedin.com/in/dat-dong-dai-74b0773a2/",
@@ -112,7 +112,7 @@ export default function BlackStudentPortfolio() {
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
           <a href="#" className="text-lg font-semibold tracking-tight">
-            Đạt<span className="text-zinc-500">.dev</span>
+            My Portfolio
           </a>
 
           <div className="hidden items-center gap-8 md:flex">
@@ -200,10 +200,12 @@ export default function BlackStudentPortfolio() {
             className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-white/5"
           >
             <div className="rounded-[1.5rem] border border-white/10 bg-black p-6">
-              <div className="mb-6 h-28 w-28 rounded-3xl bg-gradient-to-br from-white to-zinc-600 p-[1px]">
-                <div className="flex h-full w-full items-center justify-center rounded-3xl bg-black text-4xl font-bold">
-                  Đ
-                </div>
+              <div className="mb-6 h-28 w-28 rounded-full bg-gradient-to-br from-white to-zinc-600 p-[1px]">
+                <img
+                  src="/avatar.jpg"
+                  alt={personal.name}
+                  className="h-full w-full rounded-full object-cover"
+                />
               </div>
               <h3 className="text-2xl font-semibold">{personal.name}</h3>
               <p className="mt-2 text-zinc-400">{personal.role}</p>
@@ -216,7 +218,7 @@ export default function BlackStudentPortfolio() {
                   <MapPin size={18} className="text-zinc-500" /> {personal.location}
                 </p>
                 <p className="flex items-center gap-3">
-                  <Code2 size={18} className="text-zinc-500" /> Web Development / Software Engineering
+                  <Code2 size={18} className="text-zinc-500" /> Software Engineering / Full-stack Development
                 </p>
               </div>
             </div>
